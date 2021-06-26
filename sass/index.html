@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+<title>Saas example</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- navbar -->
+<div class="container" >
+
+
+<nav class="navbar">
+<a href="image/b1.jpg" class="navbar_logo">Saas
+
+</a>
+ <div class="navbar_bars">
+<i class="fas fa-bars"></i>
+
+ </div>
+ <div class="navbar_menu">
+     <a href="#" class="navbar_menu-links navbar2">Home</a>
+     <a href="#" class="navbar_menu-links">Products</a>
+     <a href="#" class="navbar_menu-links"> Services </a>
+     <a href="#" class="navbar_menu-links" id="button">Singup</a>
+    
+     <select id="mySelect">
+        <option>select</option>
+        <option>Red</option>
+        <option>Dark</option>
+        <option>Blue</option>
+       
+      </select>
+
+     <button id="button"  type="button" onclick="myFunction()" >Apply Theme</button>
+    
+    
+
+
+ </div>
+</nav>
+<div class="hero">
+    <div class="hero_container">
+        <div class="hero_container-left">
+            <h1>They are coming
+            </h1>
+            <h2>Be ready </h2>
+            <p>Sing up now </p>
+            <button  class="hero_container-btn">
+                <a href="#" >Sing up</a>
+            </button>
+        </div>
+        <div class="hero_container-right">
+            <img src="image/b2.jpg" class="hero_container-img"alt="image1" width="1500px" height="600px" style="opacity:0.6;">
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+<script>
+    function myFunction() {
+   var element = document.body;
+//    var a2 = document.getElementById("blue");
+//    var mode2=a2.getAttribute("id");
+//    var a1 = document.getElementById("dark");
+//    var mode1=a1.getAttribute("id");
+//    var a = document.getElementById("red");
+// var mode=a.getAttribute("id");
+// var mode =document.getElementsByClassName("dropdown-item");
+// var x=indexOf(mode);
+// console.log( x );
+// var mode =document.getElementsByClassName("dropdown-item")[0].getAttribute("id");
+// var mode2 =document.getElementsByClassName("dropdown-item")[1].getAttribute("id");
+//  var mode1 =document.getElementsByClassName("dropdown-item")[2].getAttribute("id");
+
+ var x = document.getElementById("mySelect").selectedIndex;
+  var y = document.getElementById("mySelect").options;
+  var mode=y[x].text;
+  console.log( mode);
+
+ 
+//   alert("Index: " + y[x].index + " is " + y[x].text);
+
+   if(mode=='Red'){
+   
+  element.classList.toggle('red');
+}else if(mode=='Dark'){
+    element.classList.toggle('dark');
+}else if(mode=='Blue'){
+    element.classList.toggle('blue');
+}else{
+    element.classList.toggle('green'); 
+}
+
+}
+</script>
+
+</html> 
